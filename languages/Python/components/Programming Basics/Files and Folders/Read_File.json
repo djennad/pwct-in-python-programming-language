@@ -1,0 +1,144 @@
+{
+ "name": "Read File",
+ "description": "Read the content of a file.",
+ "order": 50,
+ "pages": [
+  {
+   "name": "Read File",
+   "bgcolor": "#ffffff",
+   "width": 620,
+   "height": 218,
+   "controls": [
+    {
+     "type": "label",
+     "x": 0,
+     "y": 0,
+     "w": 620,
+     "h": 44,
+     "caption": "  Read File",
+     "fg": "#ffffff",
+     "bg": "#5d4037",
+     "font": [
+      "Arial",
+      14,
+      "bold"
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 67,
+     "w": 190,
+     "h": 22,
+     "caption": "Variable :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "var",
+     "title": "Variable",
+     "text": "content",
+     "kind": "target",
+     "focus": true,
+     "x": 215,
+     "y": 64,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 105,
+     "w": 190,
+     "h": 22,
+     "caption": "File name :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "file",
+     "title": "File name",
+     "text": "myfile.txt",
+     "kind": "any",
+     "escape": true,
+     "x": 215,
+     "y": 102,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 143,
+     "w": 190,
+     "h": 22,
+     "caption": "Read as :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "listbox",
+     "var": "how",
+     "title": "Read as",
+     "items": [
+      "Text",
+      "List of lines"
+     ],
+     "selected": 0,
+     "mode": "item",
+     "values": [
+      ".read()",
+      ".read().splitlines()"
+     ],
+     "x": 215,
+     "y": 140,
+     "w": 380,
+     "h": 50,
+     "fg": "#000000",
+     "bg": "#ffffff",
+     "font": [
+      "Arial",
+      10
+     ]
+    }
+   ]
+  }
+ ],
+ "mask": "<RPWI:NEWSTEP> #{var} = Read file \"#{file:item}\" as #{how:item}\nwith open(\"#{file}\", \"r\", encoding=\"utf-8\") as _pwct_file:\n<RPWI:TABPUSH>\n#{var} = _pwct_file#{how}\n<RPWI:TABPOP>",
+ "rules": {
+  "allow_root": [
+   1
+  ],
+  "allow_interaction": [],
+  "requires_ancestor": []
+ }
+}

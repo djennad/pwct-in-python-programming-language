@@ -1,0 +1,76 @@
+{
+ "name": "Constructor",
+ "description": "The method that is called when a new object is created.",
+ "order": 30,
+ "pages": [
+  {
+   "name": "Constructor",
+   "bgcolor": "#ffffff",
+   "width": 620,
+   "height": 118,
+   "controls": [
+    {
+     "type": "label",
+     "x": 0,
+     "y": 0,
+     "w": 620,
+     "h": 44,
+     "caption": "  Constructor",
+     "fg": "#ffffff",
+     "bg": "#ad1457",
+     "font": [
+      "Arial",
+      14,
+      "bold"
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 67,
+     "w": 190,
+     "h": 22,
+     "caption": "Parameters :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "params",
+     "title": "Parameters",
+     "text": "",
+     "kind": "params",
+     "allow_empty": true,
+     "focus": true,
+     "x": 215,
+     "y": 64,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    }
+   ]
+  }
+ ],
+ "mask": "<RPWI:NEWSTEP> Constructor (#{params})\n<RPWI:VALUE>\n<RPWI:POSITIVE>\n<RPWI:TEST> #{params}\n  def __init__(self):\n<RPWI:ENDTEST>\n<RPWI:NEGATIVE>\n<RPWI:TEST> #{params}\n  def __init__(self, #{params}):\n<RPWI:ENDTEST>\n<RPWI:TABPUSH>\n<RPWI:PUTMARK> 2\n<RPWI:SETMARK> 2\n<RPWI:NEWSTEP> Start Here\n<RPWI:NEWSTEP> End of Constructor\n<RPWI:TABPOP>",
+ "rules": {
+  "allow_root": [
+   1
+  ],
+  "allow_interaction": [
+   2
+  ],
+  "requires_ancestor": [
+   "Define Class"
+  ]
+ }
+}

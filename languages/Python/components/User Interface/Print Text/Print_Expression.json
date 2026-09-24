@@ -1,0 +1,71 @@
+{
+ "name": "Print Expression",
+ "description": "Print the value of variables or expressions (separate them with commas).",
+ "order": 13,
+ "pages": [
+  {
+   "name": "Print Expression",
+   "bgcolor": "#ffffff",
+   "width": 620,
+   "height": 118,
+   "controls": [
+    {
+     "type": "label",
+     "x": 0,
+     "y": 0,
+     "w": 620,
+     "h": 44,
+     "caption": "  Print Expression",
+     "fg": "#ffffff",
+     "bg": "#2e7d32",
+     "font": [
+      "Arial",
+      14,
+      "bold"
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 67,
+     "w": 190,
+     "h": 22,
+     "caption": "Expression :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "value",
+     "title": "Expression",
+     "text": "x",
+     "kind": "args",
+     "focus": true,
+     "x": 215,
+     "y": 64,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    }
+   ]
+  }
+ ],
+ "mask": "<RPWI:NEWSTEP> Print : #{value}\nprint(#{value})",
+ "rules": {
+  "allow_root": [
+   1
+  ],
+  "allow_interaction": [],
+  "requires_ancestor": []
+ }
+}

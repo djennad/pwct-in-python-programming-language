@@ -1,0 +1,20 @@
+{
+ "name": "JavaScriptPWCT",
+ "title": "JavaScript",
+ "extension": ".js",
+ "comment": "//",
+ "indent": "    ",
+ "empty_block": "",
+ "prelude": "const fs = require(\"fs\");\n\n// PyPWCT: read a line from the keyboard (synchronous input for Node.js)\nfunction input(prompt) {\n    process.stdout.write(String(prompt));\n    const bytes = [];\n    const buffer = Buffer.alloc(1);\n    while (true) {\n        let n = 0;\n        try {\n            n = fs.readSync(0, buffer, 0, 1, null);\n        } catch (e) {\n            if (e.code === \"EAGAIN\") { continue; }\n            if (e.code === \"EOF\") { break; }\n            throw e;\n        }\n        if (n === 0 || buffer[0] === 10) { break; }\n        if (buffer[0] !== 13) { bytes.push(buffer[0]); }\n    }\n    return Buffer.from(bytes).toString(\"utf8\");\n}",
+ "build": [],
+ "run": [
+  "node \"{file}\""
+ ],
+ "check": [
+  "node --check \"{file}\""
+ ],
+ "keywords": "break case catch class const continue default delete do else false finally for function if in let new null of return switch this throw true try typeof undefined var while console Math",
+ "syntax": "",
+ "start": "",
+ "description": "JavaScript (needs Node.js)"
+}

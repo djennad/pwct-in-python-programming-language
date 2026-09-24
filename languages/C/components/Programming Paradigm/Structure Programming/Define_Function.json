@@ -1,0 +1,148 @@
+{
+ "name": "Define Function",
+ "description": "Define a new function. Example of parameters: int a, int b",
+ "order": 18,
+ "pages": [
+  {
+   "name": "Define Function",
+   "bgcolor": "#ffffff",
+   "width": 620,
+   "height": 284,
+   "controls": [
+    {
+     "type": "label",
+     "x": 0,
+     "y": 0,
+     "w": 620,
+     "h": 44,
+     "caption": "  Define Function",
+     "fg": "#ffffff",
+     "bg": "#b71c1c",
+     "font": [
+      "Arial",
+      14,
+      "bold"
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 67,
+     "w": 190,
+     "h": 22,
+     "caption": "Function name :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "name",
+     "title": "Function name",
+     "text": "myfunction",
+     "kind": "name",
+     "focus": true,
+     "x": 215,
+     "y": 64,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 105,
+     "w": 190,
+     "h": 22,
+     "caption": "Return type :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "listbox",
+     "var": "type",
+     "title": "Return type",
+     "items": [
+      "void",
+      "int",
+      "double",
+      "char",
+      "char*"
+     ],
+     "selected": 0,
+     "mode": "item",
+     "x": 215,
+     "y": 102,
+     "w": 380,
+     "h": 116,
+     "fg": "#000000",
+     "bg": "#ffffff",
+     "font": [
+      "Arial",
+      10
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 233,
+     "w": 190,
+     "h": 22,
+     "caption": "Parameters (with types) :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "params",
+     "title": "Parameters (with types)",
+     "text": "",
+     "kind": "params",
+     "allow_empty": true,
+     "x": 215,
+     "y": 230,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    }
+   ]
+  }
+ ],
+ "mask": "<RPWI:NEWSTEP> Function #{name} (#{params}) : #{type}\n#{type} #{name}(#{params})\n{\n<RPWI:TABPUSH>\n<RPWI:PUTMARK> 2\n<RPWI:SETMARK> 2\n<RPWI:NEWSTEP> Start Here\n<RPWI:NEWSTEP> End of Function\n<RPWI:TABPOP>\n}\n<pwct:newline>",
+ "rules": {
+  "allow_root": [
+   1
+  ],
+  "allow_interaction": [
+   2
+  ],
+  "requires_ancestor": [],
+  "requires_step": [
+   "Functions"
+  ]
+ }
+}

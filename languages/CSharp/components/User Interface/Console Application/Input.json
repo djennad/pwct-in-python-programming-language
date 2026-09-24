@@ -1,0 +1,165 @@
+{
+ "name": "Input",
+ "description": "Get a value from the user (keyboard).",
+ "order": 11,
+ "pages": [
+  {
+   "name": "Input",
+   "bgcolor": "#ffffff",
+   "width": 620,
+   "height": 278,
+   "controls": [
+    {
+     "type": "label",
+     "x": 0,
+     "y": 0,
+     "w": 620,
+     "h": 44,
+     "caption": "  Input",
+     "fg": "#ffffff",
+     "bg": "#2e7d32",
+     "font": [
+      "Arial",
+      14,
+      "bold"
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 67,
+     "w": 190,
+     "h": 22,
+     "caption": "Variable :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "var",
+     "title": "Variable",
+     "text": "x",
+     "kind": "target",
+     "focus": true,
+     "x": 215,
+     "y": 64,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 105,
+     "w": 190,
+     "h": 22,
+     "caption": "Message :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "prompt",
+     "title": "Message",
+     "text": "Enter a value : ",
+     "kind": "any",
+     "escape": true,
+     "allow_empty": true,
+     "x": 215,
+     "y": 102,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 143,
+     "w": 190,
+     "h": 22,
+     "caption": "Data type :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "listbox",
+     "var": "type",
+     "title": "Data type",
+     "items": [
+      "Integer Number",
+      "Double Number",
+      "Text"
+     ],
+     "selected": 0,
+     "mode": "item",
+     "values": [
+      "int.Parse(Console.ReadLine())",
+      "double.Parse(Console.ReadLine())",
+      "Console.ReadLine()"
+     ],
+     "x": 215,
+     "y": 140,
+     "w": 380,
+     "h": 72,
+     "fg": "#000000",
+     "bg": "#ffffff",
+     "font": [
+      "Arial",
+      10
+     ]
+    },
+    {
+     "type": "checkbox",
+     "var": "decl",
+     "title": "Declare",
+     "caption": "Declare the variable",
+     "value": 1,
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ],
+     "x": 20,
+     "y": 224,
+     "w": 380,
+     "h": 26
+    }
+   ]
+  }
+ ],
+ "mask": "<RPWI:NEWSTEP> #{var} = Input #{type:item} : #{prompt:item}\nConsole.Write(\"#{prompt}\");\n<RPWI:VALUE> 0\n<RPWI:NEGATIVE>\n<RPWI:TEST> #{decl}\n  var #{var} = #{type};\n<RPWI:ENDTEST>\n<RPWI:VALUE> 0\n<RPWI:POSITIVE>\n<RPWI:TEST> #{decl}\n  #{var} = #{type};\n<RPWI:ENDTEST>",
+ "rules": {
+  "allow_root": [
+   1
+  ],
+  "allow_interaction": [],
+  "requires_ancestor": []
+ }
+}

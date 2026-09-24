@@ -1,0 +1,42 @@
+{
+ "name": "Exit Loop (Break)",
+ "description": "Exit from the current loop.",
+ "order": 22,
+ "pages": [
+  {
+   "name": "Exit Loop (Break)",
+   "bgcolor": "#ffffff",
+   "width": 620,
+   "height": 80,
+   "controls": [
+    {
+     "type": "label",
+     "x": 0,
+     "y": 0,
+     "w": 620,
+     "h": 44,
+     "caption": "  Exit Loop (Break)",
+     "fg": "#ffffff",
+     "bg": "#400040",
+     "font": [
+      "Arial",
+      14,
+      "bold"
+     ]
+    }
+   ]
+  }
+ ],
+ "mask": "<RPWI:NEWSTEP> Exit Loop\nbreak",
+ "rules": {
+  "allow_root": [
+   1
+  ],
+  "allow_interaction": [],
+  "requires_ancestor": [
+   "While Loop",
+   "For Loop",
+   "For Each"
+  ]
+ }
+}

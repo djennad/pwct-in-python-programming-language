@@ -1,0 +1,149 @@
+{
+ "name": "Text Operation",
+ "description": "Change the letters of a text.",
+ "order": 41,
+ "pages": [
+  {
+   "name": "Text Operation",
+   "bgcolor": "#ffffff",
+   "width": 620,
+   "height": 284,
+   "controls": [
+    {
+     "type": "label",
+     "x": 0,
+     "y": 0,
+     "w": 620,
+     "h": 44,
+     "caption": "  Text Operation",
+     "fg": "#ffffff",
+     "bg": "#e65100",
+     "font": [
+      "Arial",
+      14,
+      "bold"
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 67,
+     "w": 190,
+     "h": 22,
+     "caption": "Result variable :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "var",
+     "title": "Result variable",
+     "text": "result",
+     "kind": "target",
+     "focus": true,
+     "x": 215,
+     "y": 64,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 105,
+     "w": 190,
+     "h": 22,
+     "caption": "Text :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "text",
+     "title": "Text",
+     "text": "name",
+     "kind": "expr",
+     "x": 215,
+     "y": 102,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 143,
+     "w": 190,
+     "h": 22,
+     "caption": "Operation :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "listbox",
+     "var": "op",
+     "title": "Operation",
+     "items": [
+      "Upper Case",
+      "Lower Case",
+      "Title Case",
+      "Remove Spaces (Trim)",
+      "Reverse"
+     ],
+     "selected": 0,
+     "mode": "item",
+     "values": [
+      ".upper()",
+      ".lower()",
+      ".title()",
+      ".strip()",
+      "[::-1]"
+     ],
+     "x": 215,
+     "y": 140,
+     "w": 380,
+     "h": 116,
+     "fg": "#000000",
+     "bg": "#ffffff",
+     "font": [
+      "Arial",
+      10
+     ]
+    }
+   ]
+  }
+ ],
+ "mask": "<RPWI:NEWSTEP> #{var} = #{op:item} (#{text})\n#{var} = (#{text})#{op}",
+ "rules": {
+  "allow_root": [
+   1
+  ],
+  "allow_interaction": [],
+  "requires_ancestor": []
+ }
+}

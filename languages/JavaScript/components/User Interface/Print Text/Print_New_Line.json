@@ -1,0 +1,38 @@
+{
+ "name": "Print New Line",
+ "description": "Print an empty line.",
+ "order": 9,
+ "pages": [
+  {
+   "name": "Print New Line",
+   "bgcolor": "#ffffff",
+   "width": 620,
+   "height": 80,
+   "controls": [
+    {
+     "type": "label",
+     "x": 0,
+     "y": 0,
+     "w": 620,
+     "h": 44,
+     "caption": "  Print New Line",
+     "fg": "#ffffff",
+     "bg": "#2e7d32",
+     "font": [
+      "Arial",
+      14,
+      "bold"
+     ]
+    }
+   ]
+  }
+ ],
+ "mask": "<RPWI:NEWSTEP> Print New Line\nconsole.log();",
+ "rules": {
+  "allow_root": [
+   1
+  ],
+  "allow_interaction": [],
+  "requires_ancestor": []
+ }
+}

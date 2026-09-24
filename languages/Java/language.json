@@ -1,0 +1,20 @@
+{
+ "name": "JavaPWCT",
+ "title": "Java",
+ "extension": ".java",
+ "comment": "//",
+ "indent": "    ",
+ "empty_block": "",
+ "prelude": "import java.util.*;",
+ "build": [],
+ "run": [
+  "java \"{file}\""
+ ],
+ "check": [
+  "javac -d \"{tmpdir}\" \"{file}\""
+ ],
+ "keywords": "abstract boolean break case catch char class continue default do double else extends false final finally float for if import int long new null private protected public return static String switch this throw true try var void while System Math",
+ "syntax": "",
+ "start": "start.pwct",
+ "description": "Java (needs JDK 11 or newer: java runs the source file)"
+}

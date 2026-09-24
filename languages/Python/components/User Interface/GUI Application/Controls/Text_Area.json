@@ -1,0 +1,386 @@
+{
+ "name": "Text Area",
+ "description": "Add a multi-line text area.",
+ "order": 57,
+ "pages": [
+  {
+   "name": "Text Area",
+   "bgcolor": "#ffffff",
+   "width": 620,
+   "height": 276,
+   "controls": [
+    {
+     "type": "label",
+     "x": 0,
+     "y": 0,
+     "w": 620,
+     "h": 44,
+     "caption": "  Text Area",
+     "fg": "#ffffff",
+     "bg": "#0277bd",
+     "font": [
+      "Arial",
+      14,
+      "bold"
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 67,
+     "w": 190,
+     "h": 22,
+     "caption": "Text area name :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "name",
+     "title": "Text area name",
+     "text": "area<autonumber>",
+     "kind": "name",
+     "focus": true,
+     "x": 215,
+     "y": 64,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 105,
+     "w": 190,
+     "h": 22,
+     "caption": "Window :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "win",
+     "title": "Window",
+     "text": "win1",
+     "kind": "expr",
+     "x": 215,
+     "y": 102,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 143,
+     "w": 190,
+     "h": 22,
+     "caption": "Left (x) :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "x",
+     "title": "Left (x)",
+     "text": "20",
+     "kind": "expr",
+     "x": 215,
+     "y": 140,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 181,
+     "w": 190,
+     "h": 22,
+     "caption": "Top (y) :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "y",
+     "title": "Top (y)",
+     "text": "140",
+     "kind": "expr",
+     "x": 215,
+     "y": 178,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 220,
+     "w": 580,
+     "h": 40,
+     "caption": "Tip : design the window visually with the Form Designer (Ctrl+F).",
+     "fg": "#606060",
+     "bg": "",
+     "font": [
+      "Arial",
+      9,
+      "italic"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Appearance",
+   "bgcolor": "#ffffff",
+   "width": 620,
+   "height": 270,
+   "controls": [
+    {
+     "type": "label",
+     "x": 0,
+     "y": 0,
+     "w": 620,
+     "h": 44,
+     "caption": "  Text Area - Appearance",
+     "fg": "#ffffff",
+     "bg": "#0277bd",
+     "font": [
+      "Arial",
+      14,
+      "bold"
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 67,
+     "w": 190,
+     "h": 22,
+     "caption": "Width (pixels, optional) :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "w",
+     "title": "Width (pixels, optional)",
+     "text": "200",
+     "kind": "expr",
+     "allow_empty": true,
+     "focus": true,
+     "x": 215,
+     "y": 64,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 105,
+     "w": 190,
+     "h": 22,
+     "caption": "Height (pixels, optional) :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "h",
+     "title": "Height (pixels, optional)",
+     "text": "100",
+     "kind": "expr",
+     "allow_empty": true,
+     "x": 215,
+     "y": 102,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 143,
+     "w": 190,
+     "h": 22,
+     "caption": "Font size :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "size",
+     "title": "Font size",
+     "text": "11",
+     "kind": "expr",
+     "x": 215,
+     "y": 140,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 181,
+     "w": 190,
+     "h": 22,
+     "caption": "Text color (optional) :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "fg",
+     "title": "Text color (optional)",
+     "text": "",
+     "kind": "any",
+     "escape": true,
+     "allow_empty": true,
+     "x": 215,
+     "y": 178,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 219,
+     "w": 190,
+     "h": 22,
+     "caption": "Back color (optional) :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "bg",
+     "title": "Back color (optional)",
+     "text": "",
+     "kind": "any",
+     "escape": true,
+     "allow_empty": true,
+     "x": 215,
+     "y": 216,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    }
+   ]
+  }
+ ],
+ "mask": "<RPWI:NEWSTEP> Text Area #{name}\n#{name} = tk.Text(#{win}, font=(\"Arial\", #{size}))\n\n<RPWI:VALUE>\n<RPWI:NEGATIVE>\n<RPWI:TEST> #{fg}\n  #{name}.config(fg=\"#{fg}\")\n<RPWI:ENDTEST>\n<RPWI:TEST> #{bg}\n  #{name}.config(bg=\"#{bg}\")\n<RPWI:ENDTEST>\n#{name}.place(x=#{x}, y=#{y})\n<RPWI:TEST> #{w}\n  #{name}.place_configure(width=#{w})\n<RPWI:ENDTEST>\n<RPWI:TEST> #{h}\n  #{name}.place_configure(height=#{h})\n<RPWI:ENDTEST>",
+ "rules": {
+  "allow_root": [
+   1
+  ],
+  "allow_interaction": [],
+  "requires_ancestor": []
+ },
+ "designer": {
+  "type": "textarea",
+  "props": {
+   "name": "name",
+   "window": "win",
+   "x": "x",
+   "y": "y",
+   "w": "w",
+   "h": "h",
+   "size": "size",
+   "fg": "fg",
+   "bg": "bg"
+  }
+ }
+}

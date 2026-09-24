@@ -1,0 +1,285 @@
+{
+ "format": "PyPWCT",
+ "version": "1.3",
+ "language": "Python",
+ "next_id": 31,
+ "goals": [
+  {
+   "name": "Main",
+   "root": {
+    "id": "SP_1_",
+    "name": "Start Point (NOT STEP)",
+    "children": [
+     {
+      "id": "2_",
+      "name": "Guess The Number Game",
+      "children": [
+       {
+        "id": "4_",
+        "name": "secret = Random Number (1 To 100)",
+        "code": "import random\nsecret = random.randint(1, 100)\n",
+        "interaction": "3_",
+        "internum": 1
+       },
+       {
+        "id": "6_",
+        "name": "tries = 0",
+        "code": "tries = 0\n",
+        "interaction": "5_",
+        "internum": 1
+       },
+       {
+        "id": "8_",
+        "name": "Print : I have a number between 1 and 100, guess it!",
+        "code": "print(\"I have a number between 1 and 100, guess it!\")\n",
+        "interaction": "7_",
+        "internum": 1
+       },
+       {
+        "id": "10_",
+        "name": "While True",
+        "code": "while True:\n<RPWI:TABPUSH>\n",
+        "interaction": "9_",
+        "internum": 1,
+        "children": [
+         {
+          "id": "11_",
+          "name": "Start Here",
+          "interaction": "9_",
+          "internum": 2,
+          "children": [
+           {
+            "id": "14_",
+            "name": "guess = Input Integer Number : Your guess :",
+            "code": "guess = int(input(\"Your guess : \"))\n",
+            "interaction": "13_",
+            "internum": 1
+           },
+           {
+            "id": "16_",
+            "name": "tries += 1",
+            "code": "tries += 1\n",
+            "interaction": "15_",
+            "internum": 1
+           },
+           {
+            "id": "18_",
+            "name": "If guess < secret",
+            "code": "if guess < secret:\n<RPWI:TABPUSH>\n",
+            "interaction": "17_",
+            "internum": 1,
+            "children": [
+             {
+              "id": "19_",
+              "name": "Start Here",
+              "interaction": "17_",
+              "internum": 2,
+              "children": [
+               {
+                "id": "24_",
+                "name": "Print : Bigger...",
+                "code": "print(\"Bigger...\")\n",
+                "interaction": "23_",
+                "internum": 1
+               }
+              ]
+             },
+             {
+              "id": "20_",
+              "name": "Else If guess > secret",
+              "code": "<RPWI:TABPOP>\nelif guess > secret:\n<RPWI:TABPUSH>\n",
+              "interaction": "17_",
+              "internum": 3,
+              "children": [
+               {
+                "id": "26_",
+                "name": "Print : Smaller...",
+                "code": "print(\"Smaller...\")\n",
+                "interaction": "25_",
+                "internum": 1
+               }
+              ]
+             },
+             {
+              "id": "21_",
+              "name": "Else",
+              "code": "<RPWI:TABPOP>\nelse:\n<RPWI:TABPUSH>\n",
+              "interaction": "17_",
+              "internum": 6,
+              "children": [
+               {
+                "id": "28_",
+                "name": "Print : Great! You found it. Tries : tries",
+                "code": "print(\"Great! You found it. Tries :\", tries)\n",
+                "interaction": "27_",
+                "internum": 1
+               },
+               {
+                "id": "30_",
+                "name": "Exit Loop",
+                "code": "break\n",
+                "interaction": "29_",
+                "internum": 1
+               }
+              ]
+             },
+             {
+              "id": "22_",
+              "name": "End of If",
+              "code": "<RPWI:TABPOP>\n",
+              "interaction": "17_",
+              "internum": 7
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "id": "12_",
+          "name": "End of While",
+          "code": "<RPWI:TABPOP>\n",
+          "interaction": "9_",
+          "internum": 3
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "interactions": [
+  {
+   "id": "3_",
+   "component": "Programming Basics/Operations/Arithmetic/Random_Number",
+   "values": {
+    "var": "secret",
+    "start": "1",
+    "end": "100"
+   },
+   "parent": "2_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:08"
+  },
+  {
+   "id": "5_",
+   "component": "Programming Basics/Variables/Assignment",
+   "values": {
+    "var": "tries",
+    "value": "0"
+   },
+   "parent": "2_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:08"
+  },
+  {
+   "id": "7_",
+   "component": "User Interface/Print Text/Print_Text",
+   "values": {
+    "text": "I have a number between 1 and 100, guess it!"
+   },
+   "parent": "2_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:08"
+  },
+  {
+   "id": "9_",
+   "component": "Programming Basics/Control Structure/While_Loop",
+   "values": {
+    "cond": "True"
+   },
+   "parent": "2_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:08"
+  },
+  {
+   "id": "13_",
+   "component": "User Interface/Console Application/Input",
+   "values": {
+    "var": "guess",
+    "prompt": "Your guess : ",
+    "type": 1
+   },
+   "parent": "11_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:08"
+  },
+  {
+   "id": "15_",
+   "component": "Programming Basics/Variables/Increment_-_Decrement",
+   "values": {
+    "var": "tries",
+    "op": 0,
+    "value": "1"
+   },
+   "parent": "11_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:08"
+  },
+  {
+   "id": "17_",
+   "component": "Programming Basics/Control Structure/If_Statement",
+   "values": {
+    "cond": "guess < secret",
+    "elif1": "guess > secret",
+    "elif2": "",
+    "elif3": "",
+    "else": 1
+   },
+   "parent": "11_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:08"
+  },
+  {
+   "id": "23_",
+   "component": "User Interface/Print Text/Print_Text",
+   "values": {
+    "text": "Bigger..."
+   },
+   "parent": "19_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:08"
+  },
+  {
+   "id": "25_",
+   "component": "User Interface/Print Text/Print_Text",
+   "values": {
+    "text": "Smaller..."
+   },
+   "parent": "20_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:08"
+  },
+  {
+   "id": "27_",
+   "component": "User Interface/Print Text/Print_Text_and_Value",
+   "values": {
+    "text": "Great! You found it. Tries :",
+    "value": "tries"
+   },
+   "parent": "21_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:08"
+  },
+  {
+   "id": "29_",
+   "component": "Programming Basics/Control Structure/Exit_Loop_(Break)",
+   "values": {},
+   "parent": "21_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:08"
+  }
+ ]
+}

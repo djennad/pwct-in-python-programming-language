@@ -1,0 +1,169 @@
+{
+ "name": "For Loop",
+ "description": "Repeat steps for a counter from a start value to an end value.",
+ "order": 15,
+ "pages": [
+  {
+   "name": "For Loop",
+   "bgcolor": "#ffffff",
+   "width": 620,
+   "height": 232,
+   "controls": [
+    {
+     "type": "label",
+     "x": 0,
+     "y": 0,
+     "w": 620,
+     "h": 44,
+     "caption": "  For Loop",
+     "fg": "#ffffff",
+     "bg": "#400040",
+     "font": [
+      "Arial",
+      14,
+      "bold"
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 67,
+     "w": 190,
+     "h": 22,
+     "caption": "Variable :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "var",
+     "title": "Variable",
+     "text": "x",
+     "kind": "name",
+     "focus": true,
+     "x": 215,
+     "y": 64,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 105,
+     "w": 190,
+     "h": 22,
+     "caption": "From :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "start",
+     "title": "From",
+     "text": "1",
+     "kind": "expr",
+     "x": 215,
+     "y": 102,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 143,
+     "w": 190,
+     "h": 22,
+     "caption": "To :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "end",
+     "title": "To",
+     "text": "10",
+     "kind": "expr",
+     "x": 215,
+     "y": 140,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 181,
+     "w": 190,
+     "h": 22,
+     "caption": "Step :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "step",
+     "title": "Step",
+     "text": "1",
+     "kind": "expr",
+     "x": 215,
+     "y": 178,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    }
+   ]
+  }
+ ],
+ "mask": "<RPWI:NEWSTEP> For #{var} = #{start} To #{end} Step #{step}\nfor (int #{var} = #{start}; (#{step}) > 0 ? #{var} <= (#{end}) : #{var} >= (#{end}); #{var} += #{step}) {\n<RPWI:TABPUSH>\n<RPWI:PUTMARK> 2\n<RPWI:SETMARK> 2\n<RPWI:NEWSTEP> Start Here\n<RPWI:NEWSTEP> Next\n<RPWI:TABPOP>\n}",
+ "rules": {
+  "allow_root": [
+   1
+  ],
+  "allow_interaction": [
+   2
+  ],
+  "requires_ancestor": []
+ }
+}

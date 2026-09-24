@@ -1,0 +1,105 @@
+{
+ "name": "Import Module",
+ "description": "Import a Python module (math, random, os, ...).",
+ "order": 2,
+ "pages": [
+  {
+   "name": "Import Module",
+   "bgcolor": "#ffffff",
+   "width": 620,
+   "height": 156,
+   "controls": [
+    {
+     "type": "label",
+     "x": 0,
+     "y": 0,
+     "w": 620,
+     "h": 44,
+     "caption": "  Import Module",
+     "fg": "#ffffff",
+     "bg": "#404040",
+     "font": [
+      "Arial",
+      14,
+      "bold"
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 67,
+     "w": 190,
+     "h": 22,
+     "caption": "Module :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "module",
+     "title": "Module",
+     "text": "math",
+     "kind": "module",
+     "focus": true,
+     "x": 215,
+     "y": 64,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 105,
+     "w": 190,
+     "h": 22,
+     "caption": "Import as (optional) :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "alias",
+     "title": "Import as (optional)",
+     "text": "",
+     "kind": "name",
+     "allow_empty": true,
+     "x": 215,
+     "y": 102,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    }
+   ]
+  }
+ ],
+ "mask": "<RPWI:VALUE>\n<RPWI:POSITIVE>\n<RPWI:TEST> #{alias}\n  <RPWI:NEWSTEP> Import Module #{module}\n  import #{module}\n<RPWI:ENDTEST>\n<RPWI:NEGATIVE>\n<RPWI:TEST> #{alias}\n  <RPWI:NEWSTEP> Import Module #{module} as #{alias}\n  import #{module} as #{alias}\n<RPWI:ENDTEST>",
+ "rules": {
+  "allow_root": [
+   1,
+   2
+  ],
+  "allow_interaction": [],
+  "requires_ancestor": []
+ }
+}

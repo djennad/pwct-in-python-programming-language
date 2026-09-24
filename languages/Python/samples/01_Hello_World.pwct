@@ -1,0 +1,82 @@
+{
+ "format": "PyPWCT",
+ "version": "1.3",
+ "language": "Python",
+ "next_id": 9,
+ "goals": [
+  {
+   "name": "Main",
+   "root": {
+    "id": "SP_1_",
+    "name": "Start Point (NOT STEP)",
+    "children": [
+     {
+      "id": "2_",
+      "name": "Hello World Program",
+      "children": [
+       {
+        "id": "4_",
+        "name": "Print : Hello, World!",
+        "code": "print(\"Hello, World!\")\n",
+        "interaction": "3_",
+        "internum": 1
+       },
+       {
+        "id": "6_",
+        "name": "name = Input Text (String) : What is your name?",
+        "code": "name = str(input(\"What is your name? \"))\n",
+        "interaction": "5_",
+        "internum": 1
+       },
+       {
+        "id": "8_",
+        "name": "Print : Welcome name",
+        "code": "print(\"Welcome\", name)\n",
+        "interaction": "7_",
+        "internum": 1
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "interactions": [
+  {
+   "id": "3_",
+   "component": "User Interface/Print Text/Print_Text",
+   "values": {
+    "text": "Hello, World!"
+   },
+   "parent": "2_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:08"
+  },
+  {
+   "id": "5_",
+   "component": "User Interface/Console Application/Input",
+   "values": {
+    "var": "name",
+    "prompt": "What is your name? ",
+    "type": 0
+   },
+   "parent": "2_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:08"
+  },
+  {
+   "id": "7_",
+   "component": "User Interface/Print Text/Print_Text_and_Value",
+   "values": {
+    "text": "Welcome",
+    "value": "name"
+   },
+   "parent": "2_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:08"
+  }
+ ]
+}

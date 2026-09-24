@@ -1,0 +1,74 @@
+{
+ "name": "Return",
+ "description": "Return from the function (with an optional value).",
+ "order": 20,
+ "pages": [
+  {
+   "name": "Return",
+   "bgcolor": "#ffffff",
+   "width": 620,
+   "height": 118,
+   "controls": [
+    {
+     "type": "label",
+     "x": 0,
+     "y": 0,
+     "w": 620,
+     "h": 44,
+     "caption": "  Return",
+     "fg": "#ffffff",
+     "bg": "#b71c1c",
+     "font": [
+      "Arial",
+      14,
+      "bold"
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 67,
+     "w": 190,
+     "h": 22,
+     "caption": "Value :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "value",
+     "title": "Value",
+     "text": "",
+     "kind": "expr",
+     "allow_empty": true,
+     "focus": true,
+     "x": 215,
+     "y": 64,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    }
+   ]
+  }
+ ],
+ "mask": "<RPWI:NEWSTEP> Return #{value}\nreturn #{value};",
+ "rules": {
+  "allow_root": [
+   1
+  ],
+  "allow_interaction": [],
+  "requires_ancestor": [
+   "Define Function"
+  ]
+ }
+}

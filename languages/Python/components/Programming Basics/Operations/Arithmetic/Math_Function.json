@@ -1,0 +1,163 @@
+{
+ "name": "Math Function",
+ "description": "Use a mathematical function.",
+ "order": 47,
+ "pages": [
+  {
+   "name": "Math Function",
+   "bgcolor": "#ffffff",
+   "width": 620,
+   "height": 306,
+   "controls": [
+    {
+     "type": "label",
+     "x": 0,
+     "y": 0,
+     "w": 620,
+     "h": 44,
+     "caption": "  Math Function",
+     "fg": "#ffffff",
+     "bg": "#283593",
+     "font": [
+      "Arial",
+      14,
+      "bold"
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 67,
+     "w": 190,
+     "h": 22,
+     "caption": "Result variable :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "var",
+     "title": "Result variable",
+     "text": "result",
+     "kind": "target",
+     "focus": true,
+     "x": 215,
+     "y": 64,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 105,
+     "w": 190,
+     "h": 22,
+     "caption": "Function :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "listbox",
+     "var": "func",
+     "title": "Function",
+     "items": [
+      "Square Root",
+      "Power (x, y)",
+      "Absolute",
+      "Round",
+      "Floor",
+      "Ceil",
+      "Sine",
+      "Cosine",
+      "Tangent",
+      "Logarithm",
+      "Minimum",
+      "Maximum"
+     ],
+     "selected": 0,
+     "mode": "item",
+     "values": [
+      "math.sqrt",
+      "math.pow",
+      "abs",
+      "round",
+      "math.floor",
+      "math.ceil",
+      "math.sin",
+      "math.cos",
+      "math.tan",
+      "math.log",
+      "min",
+      "max"
+     ],
+     "x": 215,
+     "y": 102,
+     "w": 380,
+     "h": 138,
+     "fg": "#000000",
+     "bg": "#ffffff",
+     "font": [
+      "Arial",
+      10
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 255,
+     "w": 190,
+     "h": 22,
+     "caption": "Value(s) :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "args",
+     "title": "Value(s)",
+     "text": "x",
+     "kind": "args",
+     "x": 215,
+     "y": 252,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    }
+   ]
+  }
+ ],
+ "mask": "<RPWI:NEWSTEP> #{var} = #{func:item} (#{args})\nimport math\n#{var} = #{func}(#{args})",
+ "rules": {
+  "allow_root": [
+   1
+  ],
+  "allow_interaction": [],
+  "requires_ancestor": []
+ }
+}

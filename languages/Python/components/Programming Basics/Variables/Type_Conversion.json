@@ -1,0 +1,147 @@
+{
+ "name": "Type Conversion",
+ "description": "Convert a value to another type.",
+ "order": 9,
+ "pages": [
+  {
+   "name": "Type Conversion",
+   "bgcolor": "#ffffff",
+   "width": 620,
+   "height": 262,
+   "controls": [
+    {
+     "type": "label",
+     "x": 0,
+     "y": 0,
+     "w": 620,
+     "h": 44,
+     "caption": "  Type Conversion",
+     "fg": "#ffffff",
+     "bg": "#1f6f8b",
+     "font": [
+      "Arial",
+      14,
+      "bold"
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 67,
+     "w": 190,
+     "h": 22,
+     "caption": "Variable :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "var",
+     "title": "Variable",
+     "text": "x",
+     "kind": "target",
+     "focus": true,
+     "x": 215,
+     "y": 64,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 105,
+     "w": 190,
+     "h": 22,
+     "caption": "Convert to :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "listbox",
+     "var": "func",
+     "title": "Convert to",
+     "items": [
+      "Integer",
+      "Float",
+      "String",
+      "Boolean"
+     ],
+     "selected": 0,
+     "mode": "item",
+     "values": [
+      "int",
+      "float",
+      "str",
+      "bool"
+     ],
+     "x": 215,
+     "y": 102,
+     "w": 380,
+     "h": 94,
+     "fg": "#000000",
+     "bg": "#ffffff",
+     "font": [
+      "Arial",
+      10
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 211,
+     "w": 190,
+     "h": 22,
+     "caption": "Value :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "value",
+     "title": "Value",
+     "text": "x",
+     "kind": "expr",
+     "x": 215,
+     "y": 208,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    }
+   ]
+  }
+ ],
+ "mask": "<RPWI:NEWSTEP> #{var} = #{func}(#{value})\n#{var} = #{func}(#{value})",
+ "rules": {
+  "allow_root": [
+   1
+  ],
+  "allow_interaction": [],
+  "requires_ancestor": []
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "name": "Loop (Continue)",
+ "description": "Skip to the next iteration of the loop.",
+ "order": 18,
+ "pages": [
+  {
+   "name": "Loop (Continue)",
+   "bgcolor": "#ffffff",
+   "width": 620,
+   "height": 80,
+   "controls": [
+    {
+     "type": "label",
+     "x": 0,
+     "y": 0,
+     "w": 620,
+     "h": 44,
+     "caption": "  Loop (Continue)",
+     "fg": "#ffffff",
+     "bg": "#400040",
+     "font": [
+      "Arial",
+      14,
+      "bold"
+     ]
+    }
+   ]
+  }
+ ],
+ "mask": "<RPWI:NEWSTEP> Loop (Continue)\ncontinue;",
+ "rules": {
+  "allow_root": [
+   1
+  ],
+  "allow_interaction": [],
+  "requires_ancestor": [
+   "While Loop",
+   "Do While Loop",
+   "For Loop",
+   "For Each"
+  ]
+ }
+}

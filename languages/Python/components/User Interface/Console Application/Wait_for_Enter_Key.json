@@ -1,0 +1,73 @@
+{
+ "name": "Wait for Enter Key",
+ "description": "Wait until the user presses Enter.",
+ "order": 17,
+ "pages": [
+  {
+   "name": "Wait for Enter Key",
+   "bgcolor": "#ffffff",
+   "width": 620,
+   "height": 118,
+   "controls": [
+    {
+     "type": "label",
+     "x": 0,
+     "y": 0,
+     "w": 620,
+     "h": 44,
+     "caption": "  Wait for Enter Key",
+     "fg": "#ffffff",
+     "bg": "#2e7d32",
+     "font": [
+      "Arial",
+      14,
+      "bold"
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 67,
+     "w": 190,
+     "h": 22,
+     "caption": "Message :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "text",
+     "title": "Message",
+     "text": "Press Enter to continue...",
+     "kind": "any",
+     "escape": true,
+     "allow_empty": true,
+     "focus": true,
+     "x": 215,
+     "y": 64,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    }
+   ]
+  }
+ ],
+ "mask": "<RPWI:NEWSTEP> Wait : #{text:item}\ninput(\"#{text}\")",
+ "rules": {
+  "allow_root": [
+   1
+  ],
+  "allow_interaction": [],
+  "requires_ancestor": []
+ }
+}

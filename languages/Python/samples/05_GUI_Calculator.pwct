@@ -1,0 +1,412 @@
+{
+ "format": "PyPWCT",
+ "version": "1.3",
+ "language": "Python",
+ "next_id": 39,
+ "goals": [
+  {
+   "name": "Main",
+   "root": {
+    "id": "SP_1_",
+    "name": "Start Point (NOT STEP)",
+    "children": [
+     {
+      "id": "2_",
+      "name": "Events",
+      "children": [
+       {
+        "id": "4_",
+        "name": "Function add_numbers ()",
+        "code": "def add_numbers():\n<RPWI:TABPUSH>\n",
+        "interaction": "3_",
+        "internum": 1,
+        "children": [
+         {
+          "id": "5_",
+          "name": "Start Here",
+          "interaction": "3_",
+          "internum": 2,
+          "children": [
+           {
+            "id": "8_",
+            "name": "Try",
+            "code": "try:\n<RPWI:TABPUSH>\n",
+            "interaction": "7_",
+            "internum": 1,
+            "children": [
+             {
+              "id": "9_",
+              "name": "Start Here",
+              "interaction": "7_",
+              "internum": 2,
+              "children": [
+               {
+                "id": "13_",
+                "name": "a = Value of text1",
+                "code": "a = text1.get()\n",
+                "interaction": "12_",
+                "internum": 1
+               },
+               {
+                "id": "15_",
+                "name": "b = Value of text2",
+                "code": "b = text2.get()\n",
+                "interaction": "14_",
+                "internum": 1
+               },
+               {
+                "id": "17_",
+                "name": "total = float(a) + float(b)",
+                "code": "total = float(a) + float(b)\n",
+                "interaction": "16_",
+                "internum": 1
+               },
+               {
+                "id": "19_",
+                "name": "Set label3 text = \"Result : \" + str(total)",
+                "code": "label3.config(text=str(\"Result : \" + str(total)))\n",
+                "interaction": "18_",
+                "internum": 1
+               }
+              ]
+             },
+             {
+              "id": "10_",
+              "name": "Catch Exception as error",
+              "code": "<RPWI:TABPOP>\nexcept Exception as error:\n<RPWI:TABPUSH>\n",
+              "interaction": "7_",
+              "internum": 3,
+              "children": [
+               {
+                "id": "21_",
+                "name": "Message Box (Error) : \"Please enter numbers\"",
+                "code": "from tkinter import messagebox\nmessagebox.showerror(\"Error\", str(\"Please enter numbers\"))\n",
+                "interaction": "20_",
+                "internum": 1
+               }
+              ]
+             },
+             {
+              "id": "11_",
+              "name": "End of Try",
+              "code": "<RPWI:TABPOP>\n",
+              "interaction": "7_",
+              "internum": 5
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "id": "6_",
+          "name": "End of Function",
+          "code": "<RPWI:TABPOP>\n<pwct:newline>\n",
+          "interaction": "3_",
+          "internum": 3
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "22_",
+      "name": "The window",
+      "children": [
+       {
+        "id": "24_",
+        "name": "Window win1 : PyPWCT Calculator",
+        "code": "import tkinter as tk\nwin1 = tk.Tk()\nwin1.title(\"PyPWCT Calculator\")\nwin1.geometry(str(360) + \"x\" + str(220))\nwin1.configure(bg=\"#f0f0ff\")\n",
+        "interaction": "23_",
+        "internum": 1,
+        "children": [
+         {
+          "id": "25_",
+          "name": "Start Here",
+          "interaction": "23_",
+          "internum": 2,
+          "children": [
+           {
+            "id": "28_",
+            "name": "Label label1 : First number",
+            "code": "label1 = tk.Label(win1, text=\"First number\", font=(\"Arial\", 11))\nlabel1.place(x=20, y=20)\n",
+            "interaction": "27_",
+            "internum": 1
+           },
+           {
+            "id": "30_",
+            "name": "Text Box text1",
+            "code": "text1 = tk.Entry(win1, width=20, font=(\"Arial\", 11))\ntext1.place(x=150, y=22)\n",
+            "interaction": "29_",
+            "internum": 1
+           },
+           {
+            "id": "32_",
+            "name": "Label label2 : Second number",
+            "code": "label2 = tk.Label(win1, text=\"Second number\", font=(\"Arial\", 11))\nlabel2.place(x=20, y=60)\n",
+            "interaction": "31_",
+            "internum": 1
+           },
+           {
+            "id": "34_",
+            "name": "Text Box text2",
+            "code": "text2 = tk.Entry(win1, width=20, font=(\"Arial\", 11))\ntext2.place(x=150, y=62)\n",
+            "interaction": "33_",
+            "internum": 1
+           },
+           {
+            "id": "36_",
+            "name": "Button button1 : Add",
+            "code": "button1 = tk.Button(win1, text=\"  Add  \", font=(\"Arial\", 10), command=add_numbers)\nbutton1.place(x=150, y=100)\n",
+            "interaction": "35_",
+            "internum": 1
+           },
+           {
+            "id": "38_",
+            "name": "Label label3 : Result :",
+            "code": "label3 = tk.Label(win1, text=\"Result :\", font=(\"Arial\", 14))\nlabel3.place(x=20, y=150)\n",
+            "interaction": "37_",
+            "internum": 1
+           }
+          ]
+         },
+         {
+          "id": "26_",
+          "name": "End of Window win1",
+          "code": "win1.mainloop()\n",
+          "interaction": "23_",
+          "internum": 3
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "interactions": [
+  {
+   "id": "3_",
+   "component": "Programming Paradigm/Structure Programming/Define_Function",
+   "values": {
+    "name": "add_numbers",
+    "params": ""
+   },
+   "parent": "2_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:08"
+  },
+  {
+   "id": "7_",
+   "component": "Programming Basics/Control Structure/Try_-_Catch_Errors",
+   "values": {
+    "exc": "Exception",
+    "var": "error",
+    "fin": 0
+   },
+   "parent": "5_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:08"
+  },
+  {
+   "id": "12_",
+   "component": "User Interface/GUI Application/Controls/Get and Set Values/Get_Text_Box_Value",
+   "values": {
+    "var": "a",
+    "box": "text1"
+   },
+   "parent": "9_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:08"
+  },
+  {
+   "id": "14_",
+   "component": "User Interface/GUI Application/Controls/Get and Set Values/Get_Text_Box_Value",
+   "values": {
+    "var": "b",
+    "box": "text2"
+   },
+   "parent": "9_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:08"
+  },
+  {
+   "id": "16_",
+   "component": "Programming Basics/Variables/Assignment",
+   "values": {
+    "var": "total",
+    "value": "float(a) + float(b)"
+   },
+   "parent": "9_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:08"
+  },
+  {
+   "id": "18_",
+   "component": "User Interface/GUI Application/Controls/Get and Set Values/Set_Label_Text",
+   "values": {
+    "label": "label3",
+    "value": "\"Result : \" + str(total)"
+   },
+   "parent": "9_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:08"
+  },
+  {
+   "id": "20_",
+   "component": "User Interface/GUI Application/Windows/Message_Box",
+   "values": {
+    "kind": 2,
+    "title": "Error",
+    "msg": "\"Please enter numbers\""
+   },
+   "parent": "10_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:08"
+  },
+  {
+   "id": "23_",
+   "component": "User Interface/GUI Application/Windows/Create_Window",
+   "values": {
+    "name": "win1",
+    "title": "PyPWCT Calculator",
+    "width": "360",
+    "height": "220",
+    "bg": "#f0f0ff",
+    "show": 1
+   },
+   "parent": "22_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:08"
+  },
+  {
+   "id": "27_",
+   "component": "User Interface/GUI Application/Controls/Label",
+   "values": {
+    "name": "label1",
+    "win": "win1",
+    "text": "First number",
+    "x": "20",
+    "y": "20",
+    "w": "",
+    "h": "",
+    "size": "11",
+    "fg": "",
+    "bg": ""
+   },
+   "parent": "25_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:08"
+  },
+  {
+   "id": "29_",
+   "component": "User Interface/GUI Application/Controls/Text_Box",
+   "values": {
+    "name": "text1",
+    "win": "win1",
+    "x": "150",
+    "y": "22",
+    "width": "20",
+    "w": "",
+    "h": "",
+    "size": "11",
+    "fg": "",
+    "bg": ""
+   },
+   "parent": "25_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:08"
+  },
+  {
+   "id": "31_",
+   "component": "User Interface/GUI Application/Controls/Label",
+   "values": {
+    "name": "label2",
+    "win": "win1",
+    "text": "Second number",
+    "x": "20",
+    "y": "60",
+    "w": "",
+    "h": "",
+    "size": "11",
+    "fg": "",
+    "bg": ""
+   },
+   "parent": "25_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:08"
+  },
+  {
+   "id": "33_",
+   "component": "User Interface/GUI Application/Controls/Text_Box",
+   "values": {
+    "name": "text2",
+    "win": "win1",
+    "x": "150",
+    "y": "62",
+    "width": "20",
+    "w": "",
+    "h": "",
+    "size": "11",
+    "fg": "",
+    "bg": ""
+   },
+   "parent": "25_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:08"
+  },
+  {
+   "id": "35_",
+   "component": "User Interface/GUI Application/Controls/Button",
+   "values": {
+    "name": "button1",
+    "win": "win1",
+    "text": "  Add  ",
+    "x": "150",
+    "y": "100",
+    "cmd": "add_numbers",
+    "w": "",
+    "h": "",
+    "size": "10",
+    "fg": "",
+    "bg": ""
+   },
+   "parent": "25_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:08"
+  },
+  {
+   "id": "37_",
+   "component": "User Interface/GUI Application/Controls/Label",
+   "values": {
+    "name": "label3",
+    "win": "win1",
+    "text": "Result :",
+    "x": "20",
+    "y": "150",
+    "w": "",
+    "h": "",
+    "size": "14",
+    "fg": "",
+    "bg": ""
+   },
+   "parent": "25_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:08"
+  }
+ ]
+}

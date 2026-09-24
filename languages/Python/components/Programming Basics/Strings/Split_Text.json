@@ -1,0 +1,138 @@
+{
+ "name": "Split Text",
+ "description": "Split a text into a list of words.",
+ "order": 44,
+ "pages": [
+  {
+   "name": "Split Text",
+   "bgcolor": "#ffffff",
+   "width": 620,
+   "height": 194,
+   "controls": [
+    {
+     "type": "label",
+     "x": 0,
+     "y": 0,
+     "w": 620,
+     "h": 44,
+     "caption": "  Split Text",
+     "fg": "#ffffff",
+     "bg": "#e65100",
+     "font": [
+      "Arial",
+      14,
+      "bold"
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 67,
+     "w": 190,
+     "h": 22,
+     "caption": "Result list :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "var",
+     "title": "Result list",
+     "text": "words",
+     "kind": "target",
+     "focus": true,
+     "x": 215,
+     "y": 64,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 105,
+     "w": 190,
+     "h": 22,
+     "caption": "Text :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "text",
+     "title": "Text",
+     "text": "mytext",
+     "kind": "expr",
+     "x": 215,
+     "y": 102,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 143,
+     "w": 190,
+     "h": 22,
+     "caption": "Separator (empty = spaces) :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "sep",
+     "title": "Separator (empty = spaces)",
+     "text": "",
+     "kind": "any",
+     "escape": true,
+     "allow_empty": true,
+     "x": 215,
+     "y": 140,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    }
+   ]
+  }
+ ],
+ "mask": "<RPWI:VALUE>\n<RPWI:POSITIVE>\n<RPWI:TEST> #{sep}\n  <RPWI:NEWSTEP> #{var} = Split #{text}\n  #{var} = (#{text}).split()\n<RPWI:ENDTEST>\n<RPWI:NEGATIVE>\n<RPWI:TEST> #{sep}\n  <RPWI:NEWSTEP> #{var} = Split #{text} by \"#{sep:item}\"\n  #{var} = (#{text}).split(\"#{sep}\")\n<RPWI:ENDTEST>",
+ "rules": {
+  "allow_root": [
+   1,
+   2
+  ],
+  "allow_interaction": [],
+  "requires_ancestor": []
+ }
+}

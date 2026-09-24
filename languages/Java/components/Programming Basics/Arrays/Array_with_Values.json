@@ -1,0 +1,141 @@
+{
+ "name": "Array with Values",
+ "description": "Declare an array with its items.",
+ "order": 23,
+ "pages": [
+  {
+   "name": "Array with Values",
+   "bgcolor": "#ffffff",
+   "width": 620,
+   "height": 262,
+   "controls": [
+    {
+     "type": "label",
+     "x": 0,
+     "y": 0,
+     "w": 620,
+     "h": 44,
+     "caption": "  Array with Values",
+     "fg": "#ffffff",
+     "bg": "#00838f",
+     "font": [
+      "Arial",
+      14,
+      "bold"
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 67,
+     "w": 190,
+     "h": 22,
+     "caption": "Array name :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "name",
+     "title": "Array name",
+     "text": "numbers",
+     "kind": "name",
+     "focus": true,
+     "x": 215,
+     "y": 64,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 105,
+     "w": 190,
+     "h": 22,
+     "caption": "Type :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "listbox",
+     "var": "type",
+     "title": "Type",
+     "items": [
+      "int",
+      "double",
+      "String",
+      "boolean"
+     ],
+     "selected": 0,
+     "mode": "item",
+     "x": 215,
+     "y": 102,
+     "w": 380,
+     "h": 94,
+     "fg": "#000000",
+     "bg": "#ffffff",
+     "font": [
+      "Arial",
+      10
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 211,
+     "w": 190,
+     "h": 22,
+     "caption": "Items :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "items",
+     "title": "Items",
+     "text": "5, 3, 9, 1",
+     "kind": "args",
+     "x": 215,
+     "y": 208,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    }
+   ]
+  }
+ ],
+ "mask": "<RPWI:NEWSTEP> #{name} = { #{items} }\n#{type}[] #{name} = { #{items} };",
+ "rules": {
+  "allow_root": [
+   1
+  ],
+  "allow_interaction": [],
+  "requires_ancestor": []
+ }
+}

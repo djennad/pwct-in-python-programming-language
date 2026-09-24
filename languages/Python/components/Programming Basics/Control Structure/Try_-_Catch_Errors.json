@@ -1,0 +1,125 @@
+{
+ "name": "Try / Catch Errors",
+ "description": "Execute steps and catch the errors.",
+ "order": 24,
+ "pages": [
+  {
+   "name": "Try / Catch Errors",
+   "bgcolor": "#ffffff",
+   "width": 620,
+   "height": 194,
+   "controls": [
+    {
+     "type": "label",
+     "x": 0,
+     "y": 0,
+     "w": 620,
+     "h": 44,
+     "caption": "  Try / Catch Errors",
+     "fg": "#ffffff",
+     "bg": "#400040",
+     "font": [
+      "Arial",
+      14,
+      "bold"
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 67,
+     "w": 190,
+     "h": 22,
+     "caption": "Error type :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "exc",
+     "title": "Error type",
+     "text": "Exception",
+     "kind": "expr",
+     "focus": true,
+     "x": 215,
+     "y": 64,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 105,
+     "w": 190,
+     "h": 22,
+     "caption": "Error variable :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "var",
+     "title": "Error variable",
+     "text": "error",
+     "kind": "name",
+     "x": 215,
+     "y": 102,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "checkbox",
+     "var": "fin",
+     "title": "Finally",
+     "caption": "Add Finally branch (always executed)",
+     "value": 0,
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ],
+     "x": 20,
+     "y": 140,
+     "w": 380,
+     "h": 26
+    }
+   ]
+  }
+ ],
+ "mask": "<RPWI:NEWSTEP> Try\ntry:\n<RPWI:TABPUSH>\n<RPWI:PUTMARK> 2\n<RPWI:SETMARK> 2\n<RPWI:NEWSTEP> Start Here\n<RPWI:NEWSTEP> Catch #{exc} as #{var}\n<RPWI:TABPOP>\nexcept #{exc} as #{var}:\n<RPWI:TABPUSH>\n<RPWI:TEST> #{fin}\n  <RPWI:NEWSTEP> Finally\n  <RPWI:TABPOP>\n  finally:\n  <RPWI:TABPUSH>\n<RPWI:ENDTEST>\n<RPWI:NEWSTEP> End of Try\n<RPWI:TABPOP>",
+ "rules": {
+  "allow_root": [
+   1
+  ],
+  "allow_interaction": [
+   2,
+   3,
+   4
+  ],
+  "requires_ancestor": []
+ }
+}

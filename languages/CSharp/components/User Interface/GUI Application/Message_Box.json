@@ -1,0 +1,146 @@
+{
+ "name": "Message Box",
+ "description": "Show a message box (Windows).",
+ "order": 28,
+ "pages": [
+  {
+   "name": "Message Box",
+   "bgcolor": "#ffffff",
+   "width": 620,
+   "height": 240,
+   "controls": [
+    {
+     "type": "label",
+     "x": 0,
+     "y": 0,
+     "w": 620,
+     "h": 44,
+     "caption": "  Message Box",
+     "fg": "#ffffff",
+     "bg": "#0277bd",
+     "font": [
+      "Arial",
+      14,
+      "bold"
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 67,
+     "w": 190,
+     "h": 22,
+     "caption": "Type :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "listbox",
+     "var": "kind",
+     "title": "Type",
+     "items": [
+      "Information",
+      "Warning",
+      "Error"
+     ],
+     "selected": 0,
+     "mode": "item",
+     "values": [
+      "Information",
+      "Warning",
+      "Error"
+     ],
+     "x": 215,
+     "y": 64,
+     "w": 380,
+     "h": 72,
+     "fg": "#000000",
+     "bg": "#ffffff",
+     "font": [
+      "Arial",
+      10
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 151,
+     "w": 190,
+     "h": 22,
+     "caption": "Title :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "title",
+     "title": "Title",
+     "text": "Message",
+     "kind": "any",
+     "escape": true,
+     "focus": true,
+     "x": 215,
+     "y": 148,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 189,
+     "w": 190,
+     "h": 22,
+     "caption": "Message :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "msg",
+     "title": "Message",
+     "text": "\"Hello\"",
+     "kind": "expr",
+     "x": 215,
+     "y": 186,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    }
+   ]
+  }
+ ],
+ "mask": "<RPWI:NEWSTEP> Message Box (#{kind:item}) : #{msg}\nSystem.Windows.Forms.MessageBox.Show(Convert.ToString(#{msg}), \"#{title}\", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.#{kind});",
+ "rules": {
+  "allow_root": [
+   1
+  ],
+  "allow_interaction": [],
+  "requires_ancestor": []
+ }
+}

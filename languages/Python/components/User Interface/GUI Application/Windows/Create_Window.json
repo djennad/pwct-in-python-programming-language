@@ -1,0 +1,248 @@
+{
+ "name": "Create Window",
+ "description": "Create a new window: put its controls in Start Here. The window is shown at End of Window (mainloop). Design it with the Form Designer (Ctrl+F).",
+ "order": 53,
+ "pages": [
+  {
+   "name": "Create Window",
+   "bgcolor": "#ffffff",
+   "width": 620,
+   "height": 352,
+   "controls": [
+    {
+     "type": "label",
+     "x": 0,
+     "y": 0,
+     "w": 620,
+     "h": 44,
+     "caption": "  Create Window",
+     "fg": "#ffffff",
+     "bg": "#0277bd",
+     "font": [
+      "Arial",
+      14,
+      "bold"
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 67,
+     "w": 190,
+     "h": 22,
+     "caption": "Window name :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "name",
+     "title": "Window name",
+     "text": "win<autonumber>",
+     "kind": "name",
+     "focus": true,
+     "x": 215,
+     "y": 64,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 105,
+     "w": 190,
+     "h": 22,
+     "caption": "Title :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "title",
+     "title": "Title",
+     "text": "My Application",
+     "kind": "any",
+     "escape": true,
+     "x": 215,
+     "y": 102,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 143,
+     "w": 190,
+     "h": 22,
+     "caption": "Width :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "width",
+     "title": "Width",
+     "text": "400",
+     "kind": "expr",
+     "x": 215,
+     "y": 140,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 181,
+     "w": 190,
+     "h": 22,
+     "caption": "Height :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "height",
+     "title": "Height",
+     "text": "300",
+     "kind": "expr",
+     "x": 215,
+     "y": 178,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 219,
+     "w": 190,
+     "h": 22,
+     "caption": "Back color :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "bg",
+     "title": "Back color",
+     "text": "white",
+     "kind": "any",
+     "escape": true,
+     "x": 215,
+     "y": 216,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "checkbox",
+     "var": "show",
+     "title": "Show",
+     "caption": "Show the window at the end (mainloop)",
+     "value": 1,
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ],
+     "x": 20,
+     "y": 254,
+     "w": 380,
+     "h": 26
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 296,
+     "w": 580,
+     "h": 40,
+     "caption": "The controls go in (Start Here). Tip : design the window with the Form Designer (Ctrl+F).",
+     "fg": "#606060",
+     "bg": "",
+     "font": [
+      "Arial",
+      9,
+      "italic"
+     ]
+    }
+   ]
+  }
+ ],
+ "mask": "<RPWI:NEWSTEP> Window #{name} : #{title:item}\nimport tkinter as tk\n#{name} = tk.Tk()\n#{name}.title(\"#{title}\")\n#{name}.geometry(str(#{width}) + \"x\" + str(#{height}))\n#{name}.configure(bg=\"#{bg}\")\n<RPWI:PUTMARK> 2\n<RPWI:SETMARK> 2\n<RPWI:NEWSTEP> Start Here\n<RPWI:NEWSTEP> End of Window #{name}\n<RPWI:VALUE> 0\n<RPWI:NEGATIVE>\n<RPWI:TEST> #{show}\n  #{name}.mainloop()\n<RPWI:ENDTEST>",
+ "rules": {
+  "allow_root": [
+   1
+  ],
+  "allow_interaction": [
+   2
+  ],
+  "requires_ancestor": []
+ },
+ "designer": {
+  "type": "window",
+  "container": 2,
+  "props": {
+   "name": "name",
+   "title": "title",
+   "w": "width",
+   "h": "height",
+   "bg": "bg",
+   "show": "show"
+  }
+ }
+}

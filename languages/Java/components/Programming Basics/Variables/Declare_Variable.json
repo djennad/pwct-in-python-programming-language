@@ -1,0 +1,150 @@
+{
+ "name": "Declare Variable",
+ "description": "Declare a new variable (with an optional initial value).",
+ "order": 3,
+ "pages": [
+  {
+   "name": "Declare Variable",
+   "bgcolor": "#ffffff",
+   "width": 620,
+   "height": 284,
+   "controls": [
+    {
+     "type": "label",
+     "x": 0,
+     "y": 0,
+     "w": 620,
+     "h": 44,
+     "caption": "  Declare Variable",
+     "fg": "#ffffff",
+     "bg": "#1f6f8b",
+     "font": [
+      "Arial",
+      14,
+      "bold"
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 67,
+     "w": 190,
+     "h": 22,
+     "caption": "Variable name :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "name",
+     "title": "Variable name",
+     "text": "x",
+     "kind": "name",
+     "focus": true,
+     "x": 215,
+     "y": 64,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 105,
+     "w": 190,
+     "h": 22,
+     "caption": "Type :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "listbox",
+     "var": "type",
+     "title": "Type",
+     "items": [
+      "Integer (int)",
+      "Double (double)",
+      "Text (String)",
+      "Boolean (boolean)",
+      "Character (char)"
+     ],
+     "selected": 0,
+     "mode": "item",
+     "values": [
+      "int",
+      "double",
+      "String",
+      "boolean",
+      "char"
+     ],
+     "x": 215,
+     "y": 102,
+     "w": 380,
+     "h": 116,
+     "fg": "#000000",
+     "bg": "#ffffff",
+     "font": [
+      "Arial",
+      10
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 233,
+     "w": 190,
+     "h": 22,
+     "caption": "Initial value (optional) :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "value",
+     "title": "Initial value (optional)",
+     "text": "0",
+     "kind": "expr",
+     "allow_empty": true,
+     "x": 215,
+     "y": 230,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    }
+   ]
+  }
+ ],
+ "mask": "<RPWI:NEWSTEP> Declare #{name} As #{type:item} : #{value}\n\n<RPWI:VALUE>\n<RPWI:POSITIVE>\n<RPWI:TEST> #{value}\n  #{type} #{name};\n<RPWI:ENDTEST>\n<RPWI:VALUE>\n<RPWI:NEGATIVE>\n<RPWI:TEST> #{value}\n  #{type} #{name} = #{value};\n<RPWI:ENDTEST>",
+ "rules": {
+  "allow_root": [
+   1
+  ],
+  "allow_interaction": [],
+  "requires_ancestor": []
+ }
+}

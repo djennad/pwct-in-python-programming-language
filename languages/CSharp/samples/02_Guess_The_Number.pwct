@@ -1,0 +1,343 @@
+{
+ "format": "PyPWCT",
+ "version": "1.3",
+ "language": "CSharp",
+ "next_id": 38,
+ "goals": [
+  {
+   "name": "Main",
+   "root": {
+    "id": "SP_1_",
+    "name": "Start Point (NOT STEP)",
+    "children": [
+     {
+      "id": "3_",
+      "name": "Program",
+      "code": "class Program\n{\n<RPWI:TABPUSH>\nstatic Random pwctRandom = new Random();\n",
+      "interaction": "2_",
+      "internum": 1,
+      "children": [
+       {
+        "id": "4_",
+        "name": "Functions (Methods)",
+        "interaction": "2_",
+        "internum": 2
+       },
+       {
+        "id": "5_",
+        "name": "Main",
+        "code": "static void Main(string[] args)\n{\n<RPWI:TABPUSH>\n",
+        "interaction": "2_",
+        "internum": 3,
+        "children": [
+         {
+          "id": "6_",
+          "name": "Start Here",
+          "interaction": "2_",
+          "internum": 4,
+          "children": [
+           {
+            "id": "9_",
+            "name": "Guess The Number Game",
+            "children": [
+             {
+              "id": "11_",
+              "name": "secret = Random Number (1 To 100)",
+              "code": "int secret = pwctRandom.Next(1, (100) + 1);\n",
+              "interaction": "10_",
+              "internum": 1
+             },
+             {
+              "id": "13_",
+              "name": "Declare tries As Integer (int) : 0",
+              "code": "int tries = 0;\n",
+              "interaction": "12_",
+              "internum": 1
+             },
+             {
+              "id": "15_",
+              "name": "Print : I have a number between 1 and 100, guess it!",
+              "code": "Console.WriteLine(\"I have a number between 1 and 100, guess it!\");\n",
+              "interaction": "14_",
+              "internum": 1
+             },
+             {
+              "id": "17_",
+              "name": "While true",
+              "code": "while (true) {\n<RPWI:TABPUSH>\n",
+              "interaction": "16_",
+              "internum": 1,
+              "children": [
+               {
+                "id": "18_",
+                "name": "Start Here",
+                "interaction": "16_",
+                "internum": 2,
+                "children": [
+                 {
+                  "id": "21_",
+                  "name": "guess = Input Integer Number : Your guess :",
+                  "code": "Console.Write(\"Your guess : \");\nvar guess = int.Parse(Console.ReadLine());\n",
+                  "interaction": "20_",
+                  "internum": 1
+                 },
+                 {
+                  "id": "23_",
+                  "name": "tries += 1",
+                  "code": "tries += 1;\n",
+                  "interaction": "22_",
+                  "internum": 1
+                 },
+                 {
+                  "id": "25_",
+                  "name": "If guess < secret",
+                  "code": "if (guess < secret) {\n<RPWI:TABPUSH>\n",
+                  "interaction": "24_",
+                  "internum": 1,
+                  "children": [
+                   {
+                    "id": "26_",
+                    "name": "Start Here",
+                    "interaction": "24_",
+                    "internum": 2,
+                    "children": [
+                     {
+                      "id": "31_",
+                      "name": "Print : Bigger...",
+                      "code": "Console.WriteLine(\"Bigger...\");\n",
+                      "interaction": "30_",
+                      "internum": 1
+                     }
+                    ]
+                   },
+                   {
+                    "id": "27_",
+                    "name": "Else If guess > secret",
+                    "code": "<RPWI:TABPOP>\n} else if (guess > secret) {\n<RPWI:TABPUSH>\n",
+                    "interaction": "24_",
+                    "internum": 3,
+                    "children": [
+                     {
+                      "id": "33_",
+                      "name": "Print : Smaller...",
+                      "code": "Console.WriteLine(\"Smaller...\");\n",
+                      "interaction": "32_",
+                      "internum": 1
+                     }
+                    ]
+                   },
+                   {
+                    "id": "28_",
+                    "name": "Else",
+                    "code": "<RPWI:TABPOP>\n} else {\n<RPWI:TABPUSH>\n",
+                    "interaction": "24_",
+                    "internum": 6,
+                    "children": [
+                     {
+                      "id": "35_",
+                      "name": "Print : Great! You found it. Tries : tries",
+                      "code": "Console.WriteLine(\"Great! You found it. Tries : \" + tries);\n",
+                      "interaction": "34_",
+                      "internum": 1
+                     },
+                     {
+                      "id": "37_",
+                      "name": "Exit Loop",
+                      "code": "break;\n",
+                      "interaction": "36_",
+                      "internum": 1
+                     }
+                    ]
+                   },
+                   {
+                    "id": "29_",
+                    "name": "End of If",
+                    "code": "<RPWI:TABPOP>\n}\n",
+                    "interaction": "24_",
+                    "internum": 7
+                   }
+                  ]
+                 }
+                ]
+               },
+               {
+                "id": "19_",
+                "name": "End of While",
+                "code": "<RPWI:TABPOP>\n}\n",
+                "interaction": "16_",
+                "internum": 3
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "id": "7_",
+          "name": "End of Main",
+          "code": "<RPWI:TABPOP>\n}\n",
+          "interaction": "2_",
+          "internum": 5
+         }
+        ]
+       },
+       {
+        "id": "8_",
+        "name": "End of Program",
+        "code": "<RPWI:TABPOP>\n}\n",
+        "interaction": "2_",
+        "internum": 6
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "interactions": [
+  {
+   "id": "2_",
+   "component": "Programming Basics/General/Program",
+   "values": {},
+   "parent": "SP_1_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  },
+  {
+   "id": "10_",
+   "component": "Programming Basics/Operations/Arithmetic/Random_Number",
+   "values": {
+    "var": "secret",
+    "start": "1",
+    "end": "100",
+    "decl": 1
+   },
+   "parent": "9_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  },
+  {
+   "id": "12_",
+   "component": "Programming Basics/Variables/Declare_Variable",
+   "values": {
+    "name": "tries",
+    "type": 0,
+    "value": "0"
+   },
+   "parent": "9_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  },
+  {
+   "id": "14_",
+   "component": "User Interface/Print Text/Print_Text",
+   "values": {
+    "text": "I have a number between 1 and 100, guess it!"
+   },
+   "parent": "9_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  },
+  {
+   "id": "16_",
+   "component": "Programming Basics/Control Structure/While_Loop",
+   "values": {
+    "cond": "true"
+   },
+   "parent": "9_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  },
+  {
+   "id": "20_",
+   "component": "User Interface/Console Application/Input",
+   "values": {
+    "var": "guess",
+    "prompt": "Your guess : ",
+    "type": 0,
+    "decl": 1
+   },
+   "parent": "18_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  },
+  {
+   "id": "22_",
+   "component": "Programming Basics/Variables/Increment_-_Decrement",
+   "values": {
+    "var": "tries",
+    "op": 0,
+    "value": "1"
+   },
+   "parent": "18_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  },
+  {
+   "id": "24_",
+   "component": "Programming Basics/Control Structure/If_Statement",
+   "values": {
+    "cond": "guess < secret",
+    "elif1": "guess > secret",
+    "elif2": "",
+    "elif3": "",
+    "else": 1
+   },
+   "parent": "18_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  },
+  {
+   "id": "30_",
+   "component": "User Interface/Print Text/Print_Text",
+   "values": {
+    "text": "Bigger..."
+   },
+   "parent": "26_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  },
+  {
+   "id": "32_",
+   "component": "User Interface/Print Text/Print_Text",
+   "values": {
+    "text": "Smaller..."
+   },
+   "parent": "27_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  },
+  {
+   "id": "34_",
+   "component": "User Interface/Print Text/Print_Text_and_Value",
+   "values": {
+    "text": "Great! You found it. Tries :",
+    "value": "tries"
+   },
+   "parent": "28_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  },
+  {
+   "id": "36_",
+   "component": "Programming Basics/Control Structure/Exit_Loop_(Break)",
+   "values": {},
+   "parent": "28_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  }
+ ]
+}

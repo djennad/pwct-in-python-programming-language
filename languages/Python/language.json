@@ -1,0 +1,18 @@
+{
+ "name": "PythonPWCT",
+ "title": "Python",
+ "extension": ".py",
+ "comment": "#",
+ "indent": "    ",
+ "empty_block": "pass",
+ "prelude": "",
+ "build": [],
+ "run": [
+  "\"{python}\" \"{file}\""
+ ],
+ "check": [],
+ "keywords": "False None True and as assert async await break class continue def del elif else except finally for from global if import in is lambda nonlocal not or pass raise return try while with yield print input range len str int float",
+ "syntax": "python",
+ "start": "",
+ "description": "Python 3 - the same Python that runs PyPWCT (Tkinter for the GUI)"
+}

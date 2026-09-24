@@ -1,0 +1,77 @@
+{
+ "name": "Start Event Loop",
+ "description": "Show the window and wait for the user events. Not needed when (Show the window) is checked in Create Window.",
+ "order": 69,
+ "pages": [
+  {
+   "name": "Start Event Loop",
+   "bgcolor": "#ffffff",
+   "width": 620,
+   "height": 118,
+   "controls": [
+    {
+     "type": "label",
+     "x": 0,
+     "y": 0,
+     "w": 620,
+     "h": 44,
+     "caption": "  Start Event Loop",
+     "fg": "#ffffff",
+     "bg": "#0277bd",
+     "font": [
+      "Arial",
+      14,
+      "bold"
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 67,
+     "w": 190,
+     "h": 22,
+     "caption": "Window :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "win",
+     "title": "Window",
+     "text": "win1",
+     "kind": "expr",
+     "focus": true,
+     "x": 215,
+     "y": 64,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    }
+   ]
+  }
+ ],
+ "mask": "<RPWI:NEWSTEP> Show Window #{win} (Event Loop)\n#{win}.mainloop()",
+ "rules": {
+  "allow_root": [
+   1
+  ],
+  "allow_interaction": [],
+  "requires_ancestor": []
+ },
+ "designer": {
+  "type": "eventloop",
+  "props": {
+   "window": "win"
+  }
+ }
+}

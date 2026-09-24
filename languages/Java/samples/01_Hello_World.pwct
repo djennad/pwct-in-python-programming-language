@@ -1,0 +1,138 @@
+{
+ "format": "PyPWCT",
+ "version": "1.3",
+ "language": "Java",
+ "next_id": 16,
+ "goals": [
+  {
+   "name": "Main",
+   "root": {
+    "id": "SP_1_",
+    "name": "Start Point (NOT STEP)",
+    "children": [
+     {
+      "id": "3_",
+      "name": "Program",
+      "code": "class Main\n{\n<RPWI:TABPUSH>\nstatic Scanner input = new Scanner(System.in);\n",
+      "interaction": "2_",
+      "internum": 1,
+      "children": [
+       {
+        "id": "4_",
+        "name": "Functions (Methods)",
+        "interaction": "2_",
+        "internum": 2
+       },
+       {
+        "id": "5_",
+        "name": "Main",
+        "code": "public static void main(String[] args)\n{\n<RPWI:TABPUSH>\n",
+        "interaction": "2_",
+        "internum": 3,
+        "children": [
+         {
+          "id": "6_",
+          "name": "Start Here",
+          "interaction": "2_",
+          "internum": 4,
+          "children": [
+           {
+            "id": "9_",
+            "name": "Hello World Program",
+            "children": [
+             {
+              "id": "11_",
+              "name": "Print : Hello, World!",
+              "code": "System.out.println(\"Hello, World!\");\n",
+              "interaction": "10_",
+              "internum": 1
+             },
+             {
+              "id": "13_",
+              "name": "name = Input Text : What is your name?",
+              "code": "System.out.print(\"What is your name? \");\nvar name = input.nextLine();\n",
+              "interaction": "12_",
+              "internum": 1
+             },
+             {
+              "id": "15_",
+              "name": "Print : Welcome name",
+              "code": "System.out.println(\"Welcome \" + name);\n",
+              "interaction": "14_",
+              "internum": 1
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "id": "7_",
+          "name": "End of Main",
+          "code": "<RPWI:TABPOP>\n}\n",
+          "interaction": "2_",
+          "internum": 5
+         }
+        ]
+       },
+       {
+        "id": "8_",
+        "name": "End of Program",
+        "code": "<RPWI:TABPOP>\n}\n",
+        "interaction": "2_",
+        "internum": 6
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "interactions": [
+  {
+   "id": "2_",
+   "component": "Programming Basics/General/Program",
+   "values": {},
+   "parent": "SP_1_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  },
+  {
+   "id": "10_",
+   "component": "User Interface/Print Text/Print_Text",
+   "values": {
+    "text": "Hello, World!"
+   },
+   "parent": "9_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  },
+  {
+   "id": "12_",
+   "component": "User Interface/Console Application/Input",
+   "values": {
+    "var": "name",
+    "prompt": "What is your name? ",
+    "type": 2,
+    "decl": 1
+   },
+   "parent": "9_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  },
+  {
+   "id": "14_",
+   "component": "User Interface/Print Text/Print_Text_and_Value",
+   "values": {
+    "text": "Welcome",
+    "value": "name"
+   },
+   "parent": "9_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  }
+ ]
+}

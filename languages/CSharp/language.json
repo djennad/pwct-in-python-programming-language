@@ -1,0 +1,25 @@
+{
+ "name": "C#PWCT",
+ "title": "C#",
+ "extension": ".cs",
+ "comment": "//",
+ "indent": "    ",
+ "empty_block": "",
+ "prelude": "using System;\nusing System.Collections.Generic;",
+ "build": [
+  "\"%WINDIR%\\Microsoft.NET\\Framework64\\v4.0.30319\\csc.exe\" /nologo /out:\"{exe}\" \"{file}\"",
+  "\"%WINDIR%\\Microsoft.NET\\Framework\\v4.0.30319\\csc.exe\" /nologo /out:\"{exe}\" \"{file}\"",
+  "csc /nologo /out:\"{exe}\" \"{file}\""
+ ],
+ "run": [
+  "\"{exe}\""
+ ],
+ "check": [
+  "\"%WINDIR%\\Microsoft.NET\\Framework64\\v4.0.30319\\csc.exe\" /nologo /out:\"{tmpdir}\\check.exe\" \"{file}\"",
+  "csc /nologo /out:\"{tmpdir}\\check.exe\" \"{file}\""
+ ],
+ "keywords": "abstract bool break case catch char class const continue decimal default do double else enum false finally float for foreach if in int long namespace new null object private protected public return static string struct switch this throw true try using var void while Console Math",
+ "syntax": "",
+ "start": "start.pwct",
+ "description": "C# (.NET Framework compiler csc.exe - included in Windows)"
+}

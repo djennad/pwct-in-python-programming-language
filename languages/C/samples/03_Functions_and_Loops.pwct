@@ -1,0 +1,382 @@
+{
+ "format": "PyPWCT",
+ "version": "1.3",
+ "language": "C",
+ "next_id": 41,
+ "goals": [
+  {
+   "name": "Main",
+   "root": {
+    "id": "SP_1_",
+    "name": "Start Point (NOT STEP)",
+    "children": [
+     {
+      "id": "3_",
+      "name": "Program",
+      "interaction": "2_",
+      "internum": 1,
+      "children": [
+       {
+        "id": "4_",
+        "name": "Functions",
+        "interaction": "2_",
+        "internum": 2,
+        "children": [
+         {
+          "id": "9_",
+          "name": "Function factorial (int n) : int",
+          "code": "int factorial(int n)\n{\n<RPWI:TABPUSH>\n",
+          "interaction": "8_",
+          "internum": 1,
+          "children": [
+           {
+            "id": "10_",
+            "name": "Start Here",
+            "interaction": "8_",
+            "internum": 2,
+            "children": [
+             {
+              "id": "13_",
+              "name": "If n <= 1",
+              "code": "if (n <= 1) {\n<RPWI:TABPUSH>\n",
+              "interaction": "12_",
+              "internum": 1,
+              "children": [
+               {
+                "id": "14_",
+                "name": "Start Here",
+                "interaction": "12_",
+                "internum": 2,
+                "children": [
+                 {
+                  "id": "17_",
+                  "name": "Return 1",
+                  "code": "return 1;\n",
+                  "interaction": "16_",
+                  "internum": 1
+                 }
+                ]
+               },
+               {
+                "id": "15_",
+                "name": "End of If",
+                "code": "<RPWI:TABPOP>\n}\n",
+                "interaction": "12_",
+                "internum": 7
+               }
+              ]
+             },
+             {
+              "id": "19_",
+              "name": "Return n * factorial(n - 1)",
+              "code": "return n * factorial(n - 1);\n",
+              "interaction": "18_",
+              "internum": 1
+             }
+            ]
+           },
+           {
+            "id": "11_",
+            "name": "End of Function",
+            "code": "<RPWI:TABPOP>\n}\n<pwct:newline>\n",
+            "interaction": "8_",
+            "internum": 3
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "id": "5_",
+        "name": "Main",
+        "code": "int main(void)\n{\n<RPWI:TABPUSH>\nsrand((unsigned) time(NULL));\n",
+        "interaction": "2_",
+        "internum": 3,
+        "children": [
+         {
+          "id": "6_",
+          "name": "Start Here",
+          "interaction": "2_",
+          "internum": 4,
+          "children": [
+           {
+            "id": "20_",
+            "name": "Main Program",
+            "children": [
+             {
+              "id": "28_",
+              "name": "Declare result As Integer (int) : 0",
+              "code": "int result = 0;\n",
+              "interaction": "27_",
+              "internum": 1
+             },
+             {
+              "id": "22_",
+              "name": "For i = 1 To 10 Step 1",
+              "code": "for (int i = 1; (1) > 0 ? i <= (10) : i >= (10); i += 1) {\n<RPWI:TABPUSH>\n",
+              "interaction": "21_",
+              "internum": 1,
+              "children": [
+               {
+                "id": "23_",
+                "name": "Start Here",
+                "interaction": "21_",
+                "internum": 2,
+                "children": [
+                 {
+                  "id": "26_",
+                  "name": "result = Call factorial(i)",
+                  "code": "result = factorial(i);\n",
+                  "interaction": "25_",
+                  "internum": 2
+                 },
+                 {
+                  "id": "30_",
+                  "name": "Print : Factorial : result",
+                  "code": "printf(\"%s %d\\n\", \"Factorial :\", result);\n",
+                  "interaction": "29_",
+                  "internum": 1
+                 }
+                ]
+               },
+               {
+                "id": "24_",
+                "name": "Next",
+                "code": "<RPWI:TABPOP>\n}\n",
+                "interaction": "21_",
+                "internum": 3
+               }
+              ]
+             },
+             {
+              "id": "32_",
+              "name": "numbers = { 5, 3, 9, 1 }",
+              "code": "int numbers[] = { 5, 3, 9, 1 };\n",
+              "interaction": "31_",
+              "internum": 1
+             },
+             {
+              "id": "34_",
+              "name": "count = Length of numbers",
+              "code": "int count = sizeof(numbers) / sizeof(numbers[0]);\n",
+              "interaction": "33_",
+              "internum": 1
+             },
+             {
+              "id": "36_",
+              "name": "For k = 0 To count - 1 Step 1",
+              "code": "for (int k = 0; (1) > 0 ? k <= (count - 1) : k >= (count - 1); k += 1) {\n<RPWI:TABPUSH>\n",
+              "interaction": "35_",
+              "internum": 1,
+              "children": [
+               {
+                "id": "37_",
+                "name": "Start Here",
+                "interaction": "35_",
+                "internum": 2,
+                "children": [
+                 {
+                  "id": "40_",
+                  "name": "Print : Item : numbers[k]",
+                  "code": "printf(\"%s %d\\n\", \"Item :\", numbers[k]);\n",
+                  "interaction": "39_",
+                  "internum": 1
+                 }
+                ]
+               },
+               {
+                "id": "38_",
+                "name": "Next",
+                "code": "<RPWI:TABPOP>\n}\n",
+                "interaction": "35_",
+                "internum": 3
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "id": "7_",
+          "name": "End of Main",
+          "code": "return 0;\n<RPWI:TABPOP>\n}\n",
+          "interaction": "2_",
+          "internum": 5
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "interactions": [
+  {
+   "id": "2_",
+   "component": "Programming Basics/General/Program",
+   "values": {},
+   "parent": "SP_1_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  },
+  {
+   "id": "8_",
+   "component": "Programming Paradigm/Structure Programming/Define_Function",
+   "values": {
+    "name": "factorial",
+    "type": 1,
+    "params": "int n"
+   },
+   "parent": "4_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  },
+  {
+   "id": "12_",
+   "component": "Programming Basics/Control Structure/If_Statement",
+   "values": {
+    "cond": "n <= 1",
+    "elif1": "",
+    "elif2": "",
+    "elif3": "",
+    "else": 0
+   },
+   "parent": "10_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  },
+  {
+   "id": "16_",
+   "component": "Programming Paradigm/Structure Programming/Return",
+   "values": {
+    "value": "1"
+   },
+   "parent": "14_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  },
+  {
+   "id": "18_",
+   "component": "Programming Paradigm/Structure Programming/Return",
+   "values": {
+    "value": "n * factorial(n - 1)"
+   },
+   "parent": "10_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  },
+  {
+   "id": "21_",
+   "component": "Programming Basics/Control Structure/For_Loop",
+   "values": {
+    "var": "i",
+    "start": "1",
+    "end": "10",
+    "step": "1"
+   },
+   "parent": "20_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  },
+  {
+   "id": "25_",
+   "component": "Programming Paradigm/Structure Programming/Call_Function",
+   "values": {
+    "name": "factorial",
+    "args": "i",
+    "result": "result"
+   },
+   "parent": "23_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  },
+  {
+   "id": "27_",
+   "component": "Programming Basics/Variables/Declare_Variable",
+   "values": {
+    "name": "result",
+    "type": 0,
+    "value": "0"
+   },
+   "parent": "20_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  },
+  {
+   "id": "29_",
+   "component": "User Interface/Print Text/Print_Text_and_Value",
+   "values": {
+    "text": "Factorial :",
+    "value": "result",
+    "fmt": 0
+   },
+   "parent": "23_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  },
+  {
+   "id": "31_",
+   "component": "Programming Basics/Arrays/Array_with_Values",
+   "values": {
+    "name": "numbers",
+    "type": 0,
+    "items": "5, 3, 9, 1"
+   },
+   "parent": "20_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  },
+  {
+   "id": "33_",
+   "component": "Programming Basics/Arrays/Array_Length",
+   "values": {
+    "var": "count",
+    "name": "numbers",
+    "decl": 1
+   },
+   "parent": "20_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  },
+  {
+   "id": "35_",
+   "component": "Programming Basics/Control Structure/For_Loop",
+   "values": {
+    "var": "k",
+    "start": "0",
+    "end": "count - 1",
+    "step": "1"
+   },
+   "parent": "20_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  },
+  {
+   "id": "39_",
+   "component": "User Interface/Print Text/Print_Text_and_Value",
+   "values": {
+    "text": "Item :",
+    "value": "numbers[k]",
+    "fmt": 0
+   },
+   "parent": "37_",
+   "goal": "Main",
+   "date": "2026-09-24",
+   "time": "01:34:09"
+  }
+ ]
+}

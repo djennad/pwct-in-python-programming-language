@@ -1,0 +1,25 @@
+{
+ "name": "CPWCT",
+ "title": "C",
+ "extension": ".c",
+ "comment": "//",
+ "indent": "    ",
+ "empty_block": "",
+ "prelude": "#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n#include <math.h>\n#include <time.h>\n#ifdef _WIN32\n#include <windows.h>\n#endif",
+ "build": [
+  "gcc \"{file}\" -o \"{exe}\" -lm",
+  "clang \"{file}\" -o \"{exe}\"",
+  "tcc \"{file}\" -o \"{exe}\""
+ ],
+ "run": [
+  "\"{exe}\""
+ ],
+ "check": [
+  "gcc -fsyntax-only \"{file}\"",
+  "clang -fsyntax-only \"{file}\""
+ ],
+ "keywords": "auto break case char const continue default do double else enum extern float for goto if int long register return short signed sizeof static struct switch typedef union unsigned void volatile while printf scanf include main NULL",
+ "syntax": "",
+ "start": "start.pwct",
+ "description": "C language (needs gcc, clang or tcc)"
+}

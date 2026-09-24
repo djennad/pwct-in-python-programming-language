@@ -1,0 +1,121 @@
+{
+ "name": "Array Length",
+ "description": "Get the number of items in an array.",
+ "order": 24,
+ "pages": [
+  {
+   "name": "Array Length",
+   "bgcolor": "#ffffff",
+   "width": 620,
+   "height": 194,
+   "controls": [
+    {
+     "type": "label",
+     "x": 0,
+     "y": 0,
+     "w": 620,
+     "h": 44,
+     "caption": "  Array Length",
+     "fg": "#ffffff",
+     "bg": "#00838f",
+     "font": [
+      "Arial",
+      14,
+      "bold"
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 67,
+     "w": 190,
+     "h": 22,
+     "caption": "Variable :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "var",
+     "title": "Variable",
+     "text": "n",
+     "kind": "name",
+     "focus": true,
+     "x": 215,
+     "y": 64,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "label",
+     "x": 20,
+     "y": 105,
+     "w": 190,
+     "h": 22,
+     "caption": "Array :",
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ]
+    },
+    {
+     "type": "textbox",
+     "var": "name",
+     "title": "Array",
+     "text": "numbers",
+     "kind": "expr",
+     "x": 215,
+     "y": 102,
+     "w": 380,
+     "h": 26,
+     "fg": "#000080",
+     "bg": "#ffffff",
+     "font": [
+      "Consolas",
+      11
+     ]
+    },
+    {
+     "type": "checkbox",
+     "var": "decl",
+     "title": "Declare",
+     "caption": "Declare the variable",
+     "value": 1,
+     "fg": "#000000",
+     "bg": "",
+     "font": [
+      "Arial",
+      10,
+      "bold"
+     ],
+     "x": 20,
+     "y": 140,
+     "w": 380,
+     "h": 26
+    }
+   ]
+  }
+ ],
+ "mask": "<RPWI:NEWSTEP> #{var} = Length of #{name}\n\n<RPWI:VALUE> 0\n<RPWI:NEGATIVE>\n<RPWI:TEST> #{decl}\n  int #{var} = #{name}.Length;\n<RPWI:ENDTEST>\n<RPWI:VALUE> 0\n<RPWI:POSITIVE>\n<RPWI:TEST> #{decl}\n  #{var} = #{name}.Length;\n<RPWI:ENDTEST>",
+ "rules": {
+  "allow_root": [
+   1
+  ],
+  "allow_interaction": [],
+  "requires_ancestor": []
+ }
+}
